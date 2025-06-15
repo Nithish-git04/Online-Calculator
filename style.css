@@ -1,0 +1,64 @@
+@font-face{
+    font-family: "Helvetica";
+    src: url("Fonts/helvetica-now-text/HelveticaNowText-Medium.woff");
+    font-weight: 10;
+}
+
+@font-face{
+    font-family: "Helvetica-Light";
+    src: url("Fonts/helvetica-now-text/HelveticaNowText-Light.woff");
+    font-weight: 10;
+}
+
+body {
+    background: #0A0908;
+    color: #EFE9E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+head {
+    font-family: 'Helvetica-Light', sans-serif;
+    font-size: 40px;
+}
+
+table {
+    width: 350px;
+    height: 400px;
+}
+
+table button{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+table button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#input_output {
+    display: flex;
+    flex-direction: column;
+}
+
+#input {
+    background: #0A0908;
+    color: grey;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 30px;
+}
+
+#output {
+    color: grey;
+    margin: 5px;
+    font-size: 40px;
+    text-align: right;
+}
