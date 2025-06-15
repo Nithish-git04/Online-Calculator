@@ -52,6 +52,7 @@ table button:hover {
     background: #0A0908;
     color: grey;
     margin-bottom: 10px;
+    padding-top: 35px;
     text-align: right;
     font-size: 30px;
 }
@@ -61,4 +62,19 @@ table button:hover {
     margin: 5px;
     font-size: 40px;
     text-align: right;
+}
+
+@media (max-width: 750px) {
+    table {
+        height: 40%;
+        width: 80%;
+    }
+
+    #input {
+        width: 80%;
+    }
+
+    #output{
+        width: 80%;
+    }
 }
