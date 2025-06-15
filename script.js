@@ -5,6 +5,8 @@ const inp = document.getElementById('input');
 calc_btn.forEach(num => {
     num.addEventListener('click', () => {
 
+        document.getElementById('output').classList.add('nonempty');
+
         if(num.textContent == 'AC') {
             //clearing the output section if the input section is already empty.
             if(inp.value == '') {
@@ -43,6 +45,11 @@ calc_btn.forEach(num => {
                     break;
                 }
                 var last_num_index = i;
+            }
+
+            if(last_num_index === 0) {
+                inp.value = parseFloat(expression) * -1;
+                return;
             }
 
             let after = expression.slice(last_num_index + 1).trim();
