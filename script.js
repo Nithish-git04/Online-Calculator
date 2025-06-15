@@ -38,6 +38,15 @@ calc_btn.forEach(num => {
         if(num.textContent == '+/-') {
             let expression = inp.value;
 
+            //if it was already switched
+            if((expression.indexOf('(')) != -1) {
+                expression = expression.slice(0, expression.indexOf('(')) + (parseFloat(expression.slice(expression.indexOf('(') + 1,expression.indexOf(')'))) * -1)
+
+                inp.value = expression;
+                return;
+            }
+
+
             //finding the last number to switch the sign of.
             for(let i = expression.length - 1; i > -1; i--) {
                 if(isNaN(expression[i]) && expression[i] !== '.') {
@@ -72,3 +81,6 @@ calc_btn.forEach(num => {
     })
 })
 
+out.addEventListener('click', () => {
+    inp.value = out.innerText;
+})

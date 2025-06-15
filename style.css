@@ -59,11 +59,17 @@ table button:hover {
     font-size: 30px;
 }
 
-#output {
+#output, #output.nonempty {
+    white-space: nowrap;
+    text-align: right;
     color: grey;
     margin: 5px;
     font-size: 40px;
-    text-align: right;
+}
+
+#output:hover {
+    cursor: pointer;
+
 }
 
 @media (max-width: 750px) {
@@ -79,13 +85,13 @@ table button:hover {
     #output{
         display: flex;
         width: 80%;
-        font-size: 30px;
-        text-wrap: nowrap;
+        font-size: 40px;
+        white-space: nowrap;
         justify-content: center;
     }
 
     #output.nonempty {
-        font-size: 30px;
+        font-size: 40px;
         justify-content: right;
     }
 
