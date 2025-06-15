@@ -10,13 +10,6 @@
     font-weight: 10;
 }
 
-* {
-    text-shadow: 
-    -1px 0 1px grey,
-    -1px -1px 1px grey,
-    0 0 1px  grey,
-    0 -1px 1px grey;
-}
 
 body {
     background: #0A0908;
