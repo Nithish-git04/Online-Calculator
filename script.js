@@ -5,8 +5,7 @@ const inp = document.getElementById('input');
 calc_btn.forEach(num => {
     num.addEventListener('click', () => {
 
-        document.getElementById('output').classList.add('nonempty');
-
+        
         if(num.textContent == 'AC') {
             //clearing the output section if the input section is already empty.
             if(inp.value == '') {
@@ -18,6 +17,9 @@ calc_btn.forEach(num => {
             return;
         }
         if(num.textContent == '=') {
+            
+            document.getElementById('output').classList.add('nonempty');
+
             //converting % => percentage instead of modulus operator.
             if(inp.value.includes('%')) {
                 let percentage_index = inp.value.indexOf('%');

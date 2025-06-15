@@ -10,9 +10,17 @@
     font-weight: 10;
 }
 
+* {
+    text-shadow: 
+    -1px 0 1px grey,
+    -1px -1px 1px grey,
+    0 0 1px  grey,
+    0 -1px 1px grey;
+}
+
 body {
     background: #0A0908;
-    color: #EFE9E1;
+    color: #bab1a5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +35,11 @@ head {
 table {
     width: 350px;
     height: 400px;
+    /* border: 1px solid grey; */
+    box-shadow: 0 0 200px rgba(163, 163, 163, 0.6);
+    background: linear-gradient(grey, #0A0908);
+    border: 1px  linear-gradient(grey, #0A0908);
+    border-radius: 2%;
 }
 
 table button{
@@ -36,6 +49,8 @@ table button{
     font-family: 'Helvetica', sans-serif;
     font-size: 24px;
     transition: transform 0.3s ease;
+    background: #EFE9E1;
+    border-radius: 8%;
 }
 
 table button:hover {
@@ -52,7 +67,7 @@ table button:hover {
 
 #input {
     background: #0A0908;
-    color: grey;
+    color: #bab1a5;
     margin-bottom: 10px;
     padding-top: 35px;
     text-align: right;
@@ -60,19 +75,23 @@ table button:hover {
 }
 
 #output, #output.nonempty {
-    white-space: nowrap;
-    text-align: right;
-    color: grey;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    color: #bab1a5;
     margin: 5px;
     font-size: 40px;
+    transition: transform 0.3s ease;
 }
 
 #output:hover {
     cursor: pointer;
-
+    transform: scale(1.05);
+    color: rgb(165, 162, 162);
 }
 
 @media (max-width: 750px) {
+    
     table {
         height: 40%;
         width: 80%;
@@ -80,23 +99,40 @@ table button:hover {
 
     #input {
         width: 80%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
     }
 
     #output{
+        height: 200%;
         display: flex;
         width: 80%;
         font-size: 40px;
-        white-space: nowrap;
         justify-content: center;
+        align-items: end;
     }
-
+    
     #output.nonempty {
+        height: 80px;
+        display: flex;
         font-size: 40px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-all;
         justify-content: right;
     }
 
     h1{
         text-align: center;
         text-wrap: wrap;
+    }
+
+    .Note {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
